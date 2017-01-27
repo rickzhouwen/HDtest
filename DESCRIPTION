@@ -1,6 +1,6 @@
 Package: HDtest
 Type: Package
-Title: High Dimensional Test For Means, Covariances And White Noises
+Title: High Dimensional Test For Means, Covariances, And White Noise
 Version: 0.1.0.9000
 Date: 2016-12-18
 Authors@R: c(person("Meng", "Cao", 
