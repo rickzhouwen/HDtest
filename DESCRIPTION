@@ -8,7 +8,7 @@ Authors@R: c(person("Meng", "Cao",
              person("Tong", "He",
              email = "", role = "aut"),
              person("Wen", "Zhou", 
-             email = "", role = "aut"),
+             email = "rickzhouwen@gmail.com", role = "aut"),
              person("Brooke", "Anderson",
              email = "brooke.anderson@colostate.edu", role = "aut"))
 Description: High dimensional testing procedures on mean, covariance and white noises.
