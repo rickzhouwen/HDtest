@@ -19,7 +19,7 @@
 #' T. Cai, W. Liu, and Y. Xia (2014). Two-sample test of high dimensional means under
 #'    dependence. J. R. Statist. Soc. B. 76:349--372.
 #'
-#' @author Tong He
+#' @author Tong He \email{hetongh@sfu.ca}
 #'
 #' @export
 CLX <- function(X, Y, alpha, DNAME) {
