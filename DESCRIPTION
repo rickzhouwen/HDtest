@@ -6,7 +6,7 @@ Date: 2016-12-18
 Authors@R: c(person("Meng", "Cao", 
              email = "meng.cao@colostate.edu", role = c("aut", "cre")),
              person("Tong", "He",
-             email = "", role = "aut"),
+             email = "hetongh@sfu.ca", role = "aut"),
              person("Wen", "Zhou", 
              email = "rickzhouwen@gmail.com", role = "aut"),
              person("Brooke", "Anderson",
@@ -22,7 +22,7 @@ Imports:
     MASS (>= 7.3.45),
     mvtnorm (>= 1.0.5),
     stats 
-License: Apache License (== 2.0)
+License: GPL (>= 2)
 URL: http://www.stat.colostate.edu/~riczw/SW.html, https://github.com/rickzhouwen/HDtest 
 BugReports: https://github.com/rickzhouwen/HDtest/issues
 LazyData: TRUE
