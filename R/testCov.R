@@ -92,8 +92,8 @@ testCov <- function(X, Y, method = "ALL", J = 2500, alpha = 0.05, n.core = 1) {
 
 
 testCovHD <- function(X, Y, J = 2500, alpha = 0.05, DNAME, n.core = 1) {
-  checkmate::checkMatrix(X)
-  checkmate::checkMatrix(Y)
+  checkmate::assertMatrix(X)
+  checkmate::assertMatrix(Y)
 
   p <- ncol(X)
   n1 <- nrow(X)
