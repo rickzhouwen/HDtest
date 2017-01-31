@@ -98,6 +98,7 @@ testCovHD <- function(X, Y, J = 2500, alpha = 0.05, DNAME, n.core = 1) {
   p <- ncol(X)
   n1 <- nrow(X)
   n2 <- nrow(Y)
+
   if (ncol(Y) != p) {
     stop('Different dimensions of X and Y.')
   }
@@ -155,7 +156,7 @@ testCovHD <- function(X, Y, J = 2500, alpha = 0.05, DNAME, n.core = 1) {
   } else {
     ts <- matrix(0, J, 1)
     for (j in 1:J) {
-      g <- rnorm(n1 + n2) * scalev
+      g <- stats::rnorm(n1 + n2) * scalev
       atmp <- sum(g[1:n1])
       btmp <- sum(g[(n1 + 1):(n1 + n2)])
 
@@ -174,7 +175,7 @@ testCovHD <- function(X, Y, J = 2500, alpha = 0.05, DNAME, n.core = 1) {
     }
   }
 
-  ZCZt <- Tnm > quantile(ts, 1 - alpha)
+  ZCZt <- Tnm > stats::quantile(ts, 1 - alpha)
   CLX <- max((Sx - Sy) ^ 2 / (vx / n1 + vy / n2))
   # CLX = CLX-(4*log(p)-log(log(p)))
 
