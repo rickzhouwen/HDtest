@@ -45,7 +45,7 @@ for(ii in c(1:p)){
 }
 S11 <- sqrtm(S1)
 X <- S11 \%*\% matrix(rt(n * p, df = 8), ncol = n)
-wntest(X, M = 2000, k_max = 10, kk = seq(2, k_max, 2), type = 1, opt = 0)
+wntest(X, M = 1000, k_max = 10, kk = seq(2, 10, 2), type = 1, opt = 0)
 
 }
 \author{
