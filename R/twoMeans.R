@@ -54,8 +54,8 @@ twoMeans <- function(X, Y, m = 2500, filter = TRUE, SX = NULL, SY = NULL, alpha 
     tau2 <- (sqrt(2) + sqrt(2) / (2 * log(p)) + sqrt(2 * log(1 / alpha) /
                                                        log(p))) * sqrt(log(p))
 
-    Dk <- abs(rowMeans(X) - rowMeans(Y)) / sqrt(apply(X, 1, var) / n1 +
-                                                  apply(Y, 1, var) / n2)
+    Dk <- abs(rowMeans(X) - rowMeans(Y)) / sqrt(apply(X, 1, stats::var) / n1 +
+                                                  apply(Y, 1, stats::var) / n2)
     pn <- which(Dk >= min(tau1, tau2))
     X <- X[pn, , drop = FALSE]
     Y <- Y[pn, , drop = FALSE]

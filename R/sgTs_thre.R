@@ -2,7 +2,7 @@ sgTs_thre <- function(X, k0, delta, opt = 1, S1 = 1){
   n <- dim(X)[1]
   p <- dim(X)[2]
   if (opt == 1){
-    M <- cov(X)
+    M <- stats::cov(X)
     r <- eigen(M)
     G <- r$vectors
     ev <- sqrt(r$values)
@@ -17,7 +17,7 @@ sgTs_thre <- function(X, k0, delta, opt = 1, S1 = 1){
     Xn <- X1
   } else if (opt== 2){
     M <- S1
-    X1 <- solve(sqrtm(M)) %*% t(X) #A\B ==> solve(A)%*%B
+    X1 <- solve(expm::sqrtm(M)) %*% t(X) #A\B ==> solve(A)%*%B
     Xn <- X1
     #   }else if(opt == 3){
     #     X = t(X)

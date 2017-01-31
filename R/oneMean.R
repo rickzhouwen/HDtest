@@ -48,7 +48,7 @@ oneMean <- function(X, m = 2500, filter = TRUE, S = NULL, alpha = 0.05, DNAME) {
       sqrt(log(p))
 
     # var(X,1,2) ??
-    Dk <- abs(rowMeans(X)) / sqrt(apply(X, 1, var) / n)
+    Dk <- abs(rowMeans(X)) / sqrt(apply(X, 1, stats::var) / n)
     pn <- which(Dk >= min(tau1, tau2))
     X <- X[pn, , drop = FALSE]
 
@@ -78,9 +78,9 @@ oneMean <- function(X, m = 2500, filter = TRUE, S = NULL, alpha = 0.05, DNAME) {
     T2 <- max(Dt / sqrt(sn))
 
     z3.seq <- apply(abs(Z3), 1, max)
-    z3a <- quantile(z3.seq, alpha)
+    z3a <- stats::quantile(z3.seq, alpha)
     z4.seq <- apply(abs(Z4), 1, max)
-    z4a <- quantile(z4.seq, alpha)
+    z4a <- stats::quantile(z4.seq, alpha)
     Tn <- c(T1 > z3a, T2 > z4a)
     names(Tn) <- c("Non-Studentized", "Studentized")
     # return(Tn)

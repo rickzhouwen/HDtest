@@ -29,7 +29,7 @@ opbw <- function(X){
   }
   num <- sum(4 * rho ^ 2 * s2 ^ 2 / ((1 - rho) ^ 8))
   den <- sum(s2 ^ 2 / (1 - rho) ^ 4)
-  op_bw <- 1.3221 * (num / den * n) ^ (1 / ß5)
+  op_bw <- 1.3221 * (num / den * n) ^ (1 / 5)
 
   return(op_bw)
 

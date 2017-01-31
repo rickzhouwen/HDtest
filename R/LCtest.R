@@ -117,7 +117,7 @@ equalCovs <- function(X, Y, alpha, DNAME){
                                                (size2 / (size1 + size2)) * B_n2)
 
   test_stat <- T_n / Sd_prime
-  pvalue <- 1 - pnorm(test_stat)
+  pvalue <- 1 - stats::pnorm(test_stat)
   decision <- as.numeric(pvalue < alpha)
   # test <- matrix(0, 3, 1)
   # test[,1] <- c(decision, pvalue, test_stat)

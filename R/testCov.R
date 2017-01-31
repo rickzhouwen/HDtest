@@ -90,7 +90,7 @@ testCov <- function(X, Y, method = "ALL", J = 2500, alpha = 0.05, n.core = 1) {
   return(res)
 }
 
-
+#' @importFrom foreach %dopar%
 testCovHD <- function(X, Y, J = 2500, alpha = 0.05, DNAME, n.core = 1) {
   checkmate::assertMatrix(X)
   checkmate::assertMatrix(Y)
@@ -110,8 +110,8 @@ testCovHD <- function(X, Y, J = 2500, alpha = 0.05, DNAME, n.core = 1) {
   cri <- 4 * log(p) - log(log(p)) + qalpha
 
 
-  Sx <- cov(X) * (n1 - 1) / n1
-  Sy <- cov(Y) * (n2 - 1) / n2
+  Sx <- stats::cov(X) * (n1 - 1) / n1
+  Sy <- stats::cov(Y) * (n2 - 1) / n2
 
   xa <- t(t(X) - colMeans(X))
   ya <- t(t(Y) - colMeans(Y))
@@ -133,11 +133,11 @@ testCovHD <- function(X, Y, J = 2500, alpha = 0.05, DNAME, n.core = 1) {
     # for (j in 1:J) {
     cl <- parallel::makeCluster(n.core)
     doParallel::registerDoParallel(cl)
-    ts <- foreach(j = 1:J, .combine = rbind) %dopar% {
+    ts <- foreach::foreach(j = 1:J, .combine = rbind) %dopar% {
       # ind1 = ((j-1)*(n1+n2)+1):((j-1)*(n1+n2)+n1)
       # ind2 = ((j-1)*(n1+n2)+n1+1):((j-1)*(n1+n2)+n2+n1)
 
-      g <- rnorm(n1 + n2) * scalev
+      g <- stats::rnorm(n1 + n2) * scalev
       atmp <- sum(g[1:n1])
       btmp <- sum(g[(n1 + 1):(n1 + n2)])
 

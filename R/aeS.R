@@ -32,10 +32,10 @@
 aeS <- function(ft, Sn, W, M, alpha){
   p <- dim(ft)[1]
   n <- dim(ft)[2]
-  xi <- t(mvrnorm(n = M, mu = rep(0, n), Sn)) / sqrt(n)
+  xi <- t(MASS::mvrnorm(n = M, mu = rep(0, n), Sn)) / sqrt(n)
   G1 <- ft %*% xi
   G <- W * G1
-  cv <- quantile(apply(abs(G), 2, max), 1 - alpha)
+  cv <- stats::quantile(apply(abs(G), 2, max), 1 - alpha)
   return(cv)
 }
 

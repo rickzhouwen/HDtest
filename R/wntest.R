@@ -124,7 +124,7 @@ wntest = function(Y, M, kk, k_max = 10, type = 1, alpha = 0.05, k0 = 10, delta =
       res <- (abs(Tstat1) > stats::qnorm(1- alpha / 2))
 
     }else{
-      res <- (LM > qchisq(p = 1 - alpha, df = k * p ^ 2))
+      res <- (LM > stats::qchisq(p = 1 - alpha, df = k * p ^ 2))
     }
     # return (res)
 
