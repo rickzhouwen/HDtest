@@ -29,7 +29,7 @@
 #' }
 #' S11 <- sqrtm(S1)
 #' X <- S11 %*% matrix(rt(n * p, df = 8), ncol = n)
-#' wntest(X, M = 2000, k_max = 10, kk = seq(2, k_max, 2), type = 1, opt = 0)
+#' wntest(X, M = 1000, k_max = 10, kk = seq(2, 10, 2), type = 1, opt = 0)
 #'
 #' @export
 wntest = function(Y, M, kk, k_max = 10, type = 1, alpha = 0.05, k0 = 10, delta = 1.5,
@@ -154,7 +154,7 @@ wntest = function(Y, M, kk, k_max = 10, type = 1, alpha = 0.05, k0 = 10, delta =
       Q1 <- sum(ll[1:j]) * n
       Q2 <- sum(ls[1:j]) * n ^ 2
       Q3 <- Q1 + p ^ 2 * j * (j + 1) / (2 * n)
-      cvK <- qchisq(1 - alpha, p ^ 2 * j)
+      cvK <- stats::qchisq(1 - alpha, p ^ 2 * j)
       q1[ix] <- Q1 > cvK
       q2[ix] <- Q2 > cvK
       q3[ix] <- Q3 > cvK
@@ -189,7 +189,7 @@ wntest = function(Y, M, kk, k_max = 10, type = 1, alpha = 0.05, k0 = 10, delta =
       Tstat1 <- (Tstat - p ^ 2) / sqrt(2 * p ^ 2)
       res <- (abs(Tstat1) > stats::qnorm(1 - alpha / 2))
     } else {
-      res <- (Tstat > qchisq(1 - alpha, p ^ 2))
+      res <- (Tstat > stats::qchisq(1 - alpha, p ^ 2))
     }
   }
   return(res)
