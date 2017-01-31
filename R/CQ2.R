@@ -45,23 +45,21 @@ tres12 = function(X, Y) {
   mm2 <- matrix(0, p, n2)
   for (j in 1:n2) {
     tmp <- rep(1, n2)
-    tmp[j] = 0
-    mm2[,j] = rowMeans(Y[, which(tmp==1)])
+    tmp[j] <- 0
+    mm2[ , j] <- rowMeans(Y[ , which(tmp == 1)])
   }
-  W2 = (Y - mm2) %*% t(Y)
+  W2 <- (Y - mm2) %*% t(Y)
 
-  mm1 = matrix(0, p, n1)
+  mm1 <- matrix(0, p, n1)
   for (j in 1:n1) {
-    tmp = rep(1, n1)
-    tmp[j] = 0
-    mm1[,j] = rowMeans(X[, which(tmp == 1)])
+    tmp <- rep(1, n1)
+    tmp[j] <- 0
+    mm1[ , j] <- rowMeans(X[ , which(tmp == 1)])
   }
-  W1 = (X - mm1) %*% t(X)
-  s12 = sum(diag(W1 %*% W2)) / (n1 * n2)
+  W1 <- (X - mm1) %*% t(X)
+  s12 <- sum(diag(W1 %*% W2)) / (n1 * n2)
   return(s12)
 }
-
-
 
 #' CQ-test for two sample means
 #'
