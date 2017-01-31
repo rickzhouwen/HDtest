@@ -7,12 +7,15 @@
 testCov(X, Y, method = "ALL", J = 2500, alpha = 0.05, n.core = 1)
 }
 \arguments{
-\item{X}{the n x p training data, could be a \code{matrix} or a \code{data.frame} object.}
+\item{X}{the n x p training data, could be a \code{matrix} or a \code{data.frame}
+object.}
 
-\item{Y}{the n x p training data matrix, could be a \code{matrix} or a \code{data.frame} object.}
+\item{Y}{the n x p training data matrix, could be a \code{matrix} or a
+\code{data.frame} object.}
 
 \item{method}{a string incidating the method for the test. The current available
-methods are \code{ALL}, \code{HD}, \code{LC}, \code{CLX}, \code{Scott}.}
+methods are \code{"ALL"}, \code{"HD"}, \code{"LC"}, \code{"CLX"}, \code{"Scott"}
+(see Details).}
 
 \item{J}{the number of repetition in the test}
 
@@ -22,33 +25,49 @@ methods are \code{ALL}, \code{HD}, \code{LC}, \code{CLX}, \code{Scott}.}
 is called.}
 }
 \value{
-For any single method, the function returns an \code{htest} object.
-
-For method \code{ALL}: A list of four \code{htest} objects.
-
-HD refers to "Chang, J., Zhou, W., Zhou, W.-X., and Wang, L. (2016). Comparing large covariance
-matrices under weak conditions on the dependence structure and its application to gene
- clustering. Biometrics. To appear"#'
-
-CLX refers to "Cai, T. T., Liu, W., and Xia, Y. (2013).
-Two-sample covariance matrix testing and support recovery in high-dimensional
-and sparse settings. Journal of the American Statistical Association 108, 265-277."
-
-Sc refers to "Schott, J. R. (2007). A test for the equality of covariance
-matrices when the dimension is large relative to the sample size.
-Computational Statistics and Data Analysis 51, 6535-6542."
+For any single method, the function returns an \code{htest} object. For
+   the method \code{ALL}, the function returns a list of four \code{htest} objects.
 }
 \description{
-Testing the equality of two sample covariance matrices in high dimension using different methods.
+Testing the equality of two sample covariance matrices in high dimension using
+different methods.
+}
+\details{
+The \code{method} options refer to:
+\itemize{
+  \item {\code{"HD"}: }{Chang, J., Zhou, W., Zhou, W.-X., and Wang, L. (2016). Comparing large covariance
+matrices under weak conditions on the dependence structure and its application to gene
+ clustering. Biometrics. To appear.}
+ \item{\code{"CLX"}: }{Cai, T. T., Liu, W., and Xia, Y. (2013).
+Two-sample covariance matrix testing and support recovery in high-dimensional
+and sparse settings. Journal of the American Statistical Association 108, 265-277.}
+ \item{\code{"Sc"}: }{Schott, J. R. (2007). A test for the equality of covariance
+matrices when the dimension is large relative to the sample size.
+Computational Statistics and Data Analysis 51, 6535-6542.}
+}
 }
 \examples{
 data(GO54)
 testCov(GO54$X, GO54$Y, method = "ALL", J = 100)
+
 data(GO26)
 testCov(GO26$X, GO26$Y, method = "ALL", J = 100)
 
 }
 \author{
-Tong He
+Tong He \email{hetongh@sfu.ca}
+}
+\references{
+Chang, J., Zhou, W., Zhou, W.-X., and Wang, L. (2016). Comparing large covariance
+matrices under weak conditions on the dependence structure and its application to
+gene clustering. Biometrics. To appear.
+
+Cai, T. T., Liu, W., and Xia, Y. (2013).
+Two-sample covariance matrix testing and support recovery in high-dimensional
+and sparse settings. Journal of the American Statistical Association 108, 265-277.
+
+Schott, J. R. (2007). A test for the equality of covariance matrices when the
+dimension is large relative to the sample size. Computational Statistics and Data
+Analysis 51, 6535-6542.
 }
 

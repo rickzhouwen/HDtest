@@ -13,12 +13,15 @@ opbw(X)
 An optimal bandwidth.
 }
 \description{
-This is an auxillary function to estimate the bandwidth that used to estimate the long run covariance for testing multivariate white nosies.
+This is an auxillary function to estimate the bandwidth that used to estimate the
+long run covariance for testing multivariate white nosies.
 }
 \author{
-Meng Cao, Wen Zhou
+Meng Cao \email{meng.cao@colostate.edu} and
+   Wen Zhou \email{rickzhouwen@gmail.com}
 }
 \references{
-J. Chang, Q. Yao, and W. Zhou (2016) Testing for high-dimensional white noise using maximum cross correlations. \emph{Biometrika}, to appear.
+J. Chang, Q. Yao, and W. Zhou (2016) Testing for high-dimensional white noise using
+maximum cross correlations. \emph{Biometrika}, to appear.
 }
 

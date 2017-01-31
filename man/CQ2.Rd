@@ -27,7 +27,7 @@ Implementing testing procedure proposed by Chen and Qin (2010) to test the
    of signals.
 }
 \author{
-Tong He
+Tong He \email{hetongh@sfu.ca}
 }
 \references{
 S. Chen and Y. Qin (2010). A two-sample test for high-dimensional data with

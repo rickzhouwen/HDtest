@@ -18,24 +18,30 @@ the input sample.}
 
 \item{alpha}{The significant level of the test.}
 
-\item{DNAME}{Defaul input.}
+\item{DNAME}{Default input.}
 }
 \value{
 Value of testing statistics, p-values (the non-studentized statistic
-and the studentized statistic respectively), alternative hypothesis, and the name of testing procedure.
+   and the studentized statistic respectively), alternative hypothesis, and the name
+   of testing procedure.
 }
 \description{
-Testing the equality of high dimensional mean vector to zero using the method developed in arXiv:1406.1939 [math.ST]
+Testing the equality of high dimensional mean vector to zero using the method
+developed in arXiv:1406.1939 [math.ST]
 }
 \details{
-Implement the method developed in  arXiv:1406.1939 [math.ST] to test whether a high dimensional mean vector is zero or not, which is equivalent
-to test \eqn{H_0: \mu=\mu_0} for some prescribed value \eqn{\mu_0} which can be subtracted from the data. The procedure utilizes bootstrap concept and derive the critical values using
-independent Gaussian vectors whose covariance is estimated using sample covariance matrix.
+Implement the method developed in  arXiv:1406.1939 [math.ST] to test whether
+   a high dimensional mean vector is zero or not, which is equivalent to test
+   \eqn{H_0: \mu=\mu_0} for some prescribed value \eqn{\mu_0} which can be subtracted
+   from the data. The procedure utilizes bootstrap concept and derive the critical values
+   using independent Gaussian vectors whose covariance is estimated using sample
+   covariance matrix.
 }
 \author{
-Tong He
+Tong He \email{hetongh@sfu.ca}
 }
 \references{
-J. Chang, W. Zhou and W.-X. Zhou, Simulation-Based Hypothesis Testing of High Dimensional Means Under Covariance Heterogeneity (2014), arXiv:1406.1939.
+J. Chang, W. Zhou and W.-X. Zhou, Simulation-Based Hypothesis Testing of High
+Dimensional Means Under Covariance Heterogeneity (2014), arXiv:1406.1939.
 }
 

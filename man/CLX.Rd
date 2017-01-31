@@ -29,7 +29,7 @@ Implementing testing procedure proposed by Cai, Liu, and Xia (2014) to test
    sparsity of signals.
 }
 \author{
-Tong He
+Tong He \email{hetongh@sfu.ca}
 }
 \references{
 T. Cai, W. Liu, and Y. Xia (2014). Two-sample test of high dimensional means under

@@ -24,9 +24,10 @@ b An optimal bandwidth.
 segment
 }
 \author{
-Meng Cao
+Meng Cao \email{meng.cao@colostate.edu}
 }
 \references{
-J. Chang, Q. Yao, and W. Zhou (2016) Testing for high-dimensional white noise using maximum cross correlations. \emph{Biometrika}, to appear.
+J. Chang, Q. Yao, and W. Zhou (2016) Testing for high-dimensional white noise using
+maximum cross correlations. \emph{Biometrika}, to appear.
 }
 

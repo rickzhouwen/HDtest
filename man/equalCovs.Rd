@@ -16,18 +16,22 @@ equalCovs(X, Y, alpha, DNAME)
 \item{DNAME}{Default input.}
 }
 \value{
-Value of testing statistic, p-value, alternative hypothesis, and the name of testing procedure.
+Value of testing statistic, p-value, alternative hypothesis, and the name of
+   testing procedure.
 }
 \description{
-Testing the equality of two high dimensional covariance matrices using the testing procedure by Li and Chen (2012).
+Testing the equality of two high dimensional covariance matrices using the testing
+procedure by Li and Chen (2012).
 }
 \details{
-Implementing testing procedure proposed by Li and Chen (2012) to test the equality of two sample high dimensional covariance matrices.
+Implementing testing procedure proposed by Li and Chen (2012) to test the
+   equality of two sample high dimensional covariance matrices.
 }
 \author{
-Tong He
+Tong He \email{hetongh@sfu.ca}
 }
 \references{
-J. Li and S. Chen (2012). Two sample tests for high-dimensional covariance matrices. Ann. Statist. 40, 908--940
+J. Li and S. Chen (2012). Two sample tests for high-dimensional covariance matrices.
+   Ann. Statist. 40, 908--940.
 }
 
