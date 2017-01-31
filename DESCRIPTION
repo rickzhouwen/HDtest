@@ -27,8 +27,6 @@ URL: http://www.stat.colostate.edu/~riczw/SW.html, https://github.com/rickzhouwe
 BugReports: https://github.com/rickzhouwen/HDtest/issues
 LazyData: TRUE
 RoxygenNote: 5.0.1
-
-
-
-
-
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
