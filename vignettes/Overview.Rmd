@@ -9,3 +9,9 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+# Overview of the package
+
+# Basic example of using the package
+
+# More detailed examples
+
