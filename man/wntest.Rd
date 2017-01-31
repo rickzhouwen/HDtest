@@ -2,9 +2,9 @@
 % Please edit documentation in R/wntest.R
 \name{wntest}
 \alias{wntest}
-\title{Test_our_new}
+\title{Test white noise}
 \usage{
-wntest(Y, M, k_max = 10, kk, type = 1, alpha = 0.05, k0 = 10,
+wntest(Y, M, kk, k_max = 10, type = 1, alpha = 0.05, k0 = 10,
   delta = 1.5, opt = 1)
 }
 \arguments{
@@ -12,9 +12,9 @@ wntest(Y, M, k_max = 10, kk, type = 1, alpha = 0.05, k0 = 10,
 
 \item{M}{is a parameter, could be 1000, 2000 for example}
 
-\item{k_max}{is a parameter (for example default 10)}
-
 \item{kk}{is a vector of parameters, could be a scalar as well (kk = c(2:10))}
+
+\item{k_max}{is a parameter (for example default 10)}
 
 \item{type}{1: wntest, 2: test_LM, 3: test_pre, 4: test_TB
 type = 1 need X, k_max, ,kk, M, bw, type = 2 need Y, k, type = 3: need Y, k_max, kk, type = 4: need Y}
@@ -35,26 +35,20 @@ Our new method to test white noise
 }
 \examples{
 library(expm)
-p = 15
-n = 300
-S1 = diag(1, p, p)
+p <- 15
+n <- 300
+S1 <- diag(1, p, p)
 for(ii in c(1:p)){
-for(jj in c(1:p)){
-S1[ii, jj] = 0.995^(abs(ii-jj))
+  for(jj in c(1:p)){
+    S1[ii, jj] <- 0.995 ^ (abs(ii - jj))
+  }
 }
-}
-S11 = sqrtm(S1)
-X = S11 \%*\% matrix(rt(n*p, df = 8), ncol = n)
-k_max = 10
-kk = seq(2, k_max, 2)
-M = 2000
-k0 = 10
-delta = 1.5
-alpha = 0.05
-wntest(X, M, k_max, kk, type = 1, opt = 0)
+S11 <- sqrtm(S1)
+X <- S11 \%*\% matrix(rt(n * p, df = 8), ncol = n)
+wntest(X, M = 2000, k_max = 10, kk = seq(2, k_max, 2), type = 1, opt = 0)
 
 }
 \author{
-Meng Cao
+Meng Cao \email{meng.cao@colostate.edu}
 }
 
