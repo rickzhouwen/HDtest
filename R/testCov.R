@@ -34,10 +34,10 @@
 #'
 #' @examples
 #' data(GO54)
-#' testCov(GO54$X, GO54$Y, method = "HD", J = 100)
+#' testCov(GO54$X, GO54$Y, method = "ALL", J = 100)
 #'
 #' data(GO26)
-#' testCov(GO26$X, GO26$Y, method = "Scott", J = 100)
+#' testCov(GO26$X, GO26$Y, method = "HD", J = 100)
 #'
 #' @references
 #' Chang, J., Zhou, W., Zhou, W.-X., and Wang, L. (2016). Comparing large covariance
